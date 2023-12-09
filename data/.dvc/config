@@ -1,4 +1,6 @@
 [core]
     remote = zahid
+['remote "myremote"']
+    url = gdrive://1oQzugom2dKDOulBprzcIOwaNiBJDksZj
 ['remote "zahid"']
     url = gdrive://1oQzugom2dKDOulBprzcIOwaNiBJDksZj
