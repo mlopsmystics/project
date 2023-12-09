@@ -24,6 +24,11 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+    
+    - name: Configure DVC remote
+      run: |
+        dvc remote modify zahid gdrive_user_credentials_file ./default.json
+      
 
     - name: Run DVC pipeline
       run: |
