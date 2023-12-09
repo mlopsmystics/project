@@ -27,7 +27,7 @@ jobs:
     
     - name: Configure DVC remote
       run: |
-        dvc remote modify gdrive_user_credentials_file ./default.json
+        dvc remote modify zahid gdrive_user_credentials_file ./default.json
       
 
     - name: Run DVC pipeline
