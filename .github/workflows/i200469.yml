@@ -28,21 +28,22 @@ jobs:
     - name: Change to data directory
       run: |
         cd ./data
+        ls
     
     - name: Pull data from Google Drive
       run: |
         dvc pull myremote
       working-directory: ./data
 
-    - name: Pull data from Google Drive
-      run: |
-        dvc pull myremote
 
     - name: Generate data
       run: |
         python random_data.py
+      working-directory: ./data
+
 
     - name: Push data to Google Drive
       run: |
         dvc add dummy_sensor_data.csv
         dvc push myremote
+      working-directory: ./data
