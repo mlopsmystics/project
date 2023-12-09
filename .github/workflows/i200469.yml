@@ -32,7 +32,7 @@ jobs:
     
     - name: Pull data from Google Drive
       run: |
-        dvc pull myremote
+        dvc pull
       working-directory: ./data
 
 
@@ -45,5 +45,5 @@ jobs:
     - name: Push data to Google Drive
       run: |
         dvc add dummy_sensor_data.csv
-        dvc push myremote
+        dvc push
       working-directory: ./data
