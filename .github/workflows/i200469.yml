@@ -28,6 +28,11 @@ jobs:
     - name: Change to data directory
       run: |
         cd ./data
+    
+    - name: Pull data from Google Drive
+      run: |
+        dvc pull myremote
+      working-directory: ./data
 
     - name: Pull data from Google Drive
       run: |
