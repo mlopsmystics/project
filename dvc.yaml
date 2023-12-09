@@ -11,18 +11,12 @@ stages:
   add_dummy_sensor_data:
     cmd: |
       dvc add ./data/dummy_sensor_data.csv
-    deps:
-      - ./data/dummy_sensor_data.csv
   add_train_data:
     cmd: |
       dvc add ./data/prepared/train.csv
-    deps:
-      - ./data/prepared/train.csv
   add_test_data:
     cmd: |
       dvc add ./data/prepared/test.csv
-    deps:
-      - ./data/prepared/test.csv
   push_data:
     cmd: |
       dvc push
