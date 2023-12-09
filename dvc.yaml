@@ -1,3 +1,11 @@
 stages:
   add_data:
-    cmd: python random_data.py
+    cmd: python ./data/random_data.py
+    outs:
+      - ./data/random_data.py
+
+  preprocess_data:
+    cmd: python prepare_data.py
+    deps:
+      - ./data/prepare_data.py
+      - ./data/dummy_sensor_data.csv
