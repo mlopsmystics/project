@@ -24,26 +24,17 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-
-    - name: Change to data directory
-      run: |
-        cd ./data
-        ls
     
     - name: Pull data from Google Drive
       run: |
         dvc pull
-      working-directory: ./data
-
 
     - name: Generate data
       run: |
-        python random_data.py
-      working-directory: ./data
+        python ./data/random_data.py
 
 
     - name: Push data to Google Drive
       run: |
-        dvc add dummy_sensor_data.csv
+        dvc add ./data/dummy_sensor_data.csv
         dvc push
-      working-directory: ./data
