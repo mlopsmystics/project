@@ -1,2 +1,3 @@
 venv/
 .vscode/
+/data/dummy_sensor_data.csv
