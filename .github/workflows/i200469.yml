@@ -25,6 +25,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Change to data directory
+      run: |
+        cd ./data
 
     - name: Pull data from Google Drive
       run: |
@@ -32,9 +35,9 @@ jobs:
 
     - name: Generate data
       run: |
-        python ./data/random_data.py
+        python random_data.py
 
     - name: Push data to Google Drive
       run: |
-        dvc add ./data/dummy_sensor_data.csv
+        dvc add dummy_sensor_data.csv
         dvc push myremote
