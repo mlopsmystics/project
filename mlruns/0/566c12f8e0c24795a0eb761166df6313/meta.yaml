@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/566c12f8e0c24795a0eb761166df6313/artifacts
+end_time: 1702162222236
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 566c12f8e0c24795a0eb761166df6313
+run_name: exultant-crow-336
+run_uuid: 566c12f8e0c24795a0eb761166df6313
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1702162186646
+status: 3
+tags: []
+user_id: Zahid imran

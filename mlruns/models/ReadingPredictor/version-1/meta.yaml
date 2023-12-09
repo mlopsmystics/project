@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1702162310232
+current_stage: None
+description: null
+last_updated_timestamp: 1702162310232
+name: ReadingPredictor
+run_id: null
+run_link: null
+source: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/6332a7ceea4048eaa5d4fd16e9f62e6c/artifacts/rf-model
+status: READY
+status_message: null
+storage_location: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/6332a7ceea4048eaa5d4fd16e9f62e6c/artifacts/rf-model
+user_id: null
+version: 1

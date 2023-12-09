@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/380a42149a45436ab5d4f40b60f029b3/artifacts
+end_time: 1702162222236
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 380a42149a45436ab5d4f40b60f029b3
+run_name: learned-kite-134
+run_uuid: 380a42149a45436ab5d4f40b60f029b3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1702162186646
+status: 3
+tags: []
+user_id: Zahid imran

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/ebafb8a204e54dd5a1e899432a040161/artifacts
+end_time: 1702162222236
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ebafb8a204e54dd5a1e899432a040161
+run_name: rumbling-hen-403
+run_uuid: ebafb8a204e54dd5a1e899432a040161
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1702162186646
+status: 3
+tags: []
+user_id: Zahid imran

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/482780b555e3444b8aea9396bf7be46a/artifacts
+end_time: 1702162298455
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 482780b555e3444b8aea9396bf7be46a
+run_name: thundering-crab-386
+run_uuid: 482780b555e3444b8aea9396bf7be46a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1702162263732
+status: 3
+tags: []
+user_id: Zahid imran

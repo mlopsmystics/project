@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/74e48978e3a043ae8957ae8cfbd1ffeb/artifacts
+end_time: 1702162298455
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 74e48978e3a043ae8957ae8cfbd1ffeb
+run_name: learned-wolf-348
+run_uuid: 74e48978e3a043ae8957ae8cfbd1ffeb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1702162263732
+status: 3
+tags: []
+user_id: Zahid imran
