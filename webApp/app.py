@@ -12,8 +12,8 @@ app = Flask(__name__)
 
 def load_model(model_name):
     client = MlflowClient()
-    model_metadata = client.get_latest_versions(model_name, stages=["None"])
-    latest_model_version = model_metadata[0].version
+    model_versions = client.search_model_versions(f"name='{model_name}'")
+    latest_model_version = model_versions[0].version
     model = mlflow.pyfunc.load_model(f"models:/{model_name}/{latest_model_version}")
     return model
 
