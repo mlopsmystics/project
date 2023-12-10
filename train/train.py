@@ -4,8 +4,20 @@ from sklearn.model_selection import GridSearchCV
 import numpy as np
 import mlflow
 import mlflow.sklearn
+from mlflow.tracking import MlflowClient
+import joblib
 import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
+
+
+def load_model(model_name):
+    client = MlflowClient()
+    model_versions = client.search_model_versions(f"name='{model_name}'")
+    latest_model_version = model_versions[0].version
+    model = mlflow.pyfunc.load_model(f"models:/{model_name}/{latest_model_version}")
+
+    # Save the model to the ./webApp directory
+    joblib.dump(model, './webApp/model.pkl')
 
 
 def train(data_path):
@@ -57,3 +69,4 @@ def train(data_path):
 if __name__=="__main__":
     data_path = "./data/prepared/"
     train(data_path)
+    load_model("ReadingPredictor")
