@@ -30,6 +30,6 @@ jobs:
         dvc remote modify zahid gdrive_user_credentials_file ./default.json
       
 
-    # - name: Run DVC pipeline
-    #   run: |
-    #     dvc repro
+    - name: Run DVC pipeline
+      run: |
+        dvc repro
