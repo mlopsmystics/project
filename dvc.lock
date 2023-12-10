@@ -1,0 +1,32 @@
+schema: '2.0'
+stages:
+  add_data:
+    cmd: python ./data/random_data.py
+    deps:
+    - path: ./data/random_data.py
+      hash: md5
+      md5: e13a984b5bd75ae569cfca865d9282e6
+      size: 2657
+  preprocess_data:
+    cmd: python ./data/prepare_data.py
+    deps:
+    - path: ./data/dummy_sensor_data.csv
+      hash: md5
+      md5: 1a521bd30946de2c0de63792b63e32fd
+      size: 147060
+    - path: ./data/prepare_data.py
+      hash: md5
+      md5: 41f2f4b1d2931027f0dfe24f88c9d184
+      size: 2066
+  add_dummy_sensor_data:
+    cmd: "dvc add ./data/dummy_sensor_data.csv\n"
+  add_train_data:
+    cmd: "dvc add ./data/prepared/train.csv\n"
+  add_test_data:
+    cmd: "dvc add ./data/prepared/test.csv\n"
+  push_data:
+    cmd: dvc push
+  pull_data:
+    cmd: dvc pull
+  train_model:
+    cmd: python ./train/train.py
