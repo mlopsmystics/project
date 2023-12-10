@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/b7deedb15a834d49a24689fb18f1bbcd/artifacts
+end_time: 1702207966176
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b7deedb15a834d49a24689fb18f1bbcd
+run_name: bemused-worm-292
+run_uuid: b7deedb15a834d49a24689fb18f1bbcd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1702207922666
+status: 3
+tags: []
+user_id: Zahid imran

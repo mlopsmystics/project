@@ -28,3 +28,5 @@ stages:
     cmd: dvc push
   pull_data:
     cmd: dvc pull
+  train_model:
+    cmd: python ./train/train.py

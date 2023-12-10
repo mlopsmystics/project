@@ -4,6 +4,9 @@ from sklearn.model_selection import GridSearchCV
 import numpy as np
 import mlflow
 import mlflow.sklearn
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning)
+
 
 def train(data_path):
 
