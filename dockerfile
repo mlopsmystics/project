@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Copy source code
 COPY webApp/ /app/webApp
-COPY mlruns/ /app/mlflow
+COPY mlruns/ /app/mlruns
 COPY requirements.txt /app
 
 # Install dependencies
