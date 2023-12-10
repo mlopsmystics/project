@@ -1,5 +1,5 @@
 # Base image
-FROM python:3.10
+FROM python:latest
 
 # Set working directory
 WORKDIR /app
@@ -20,4 +20,4 @@ ENV FLASK_APP webApp
 ENV FLASK_RUN_HOST 0.0.0.0
 
 # Run app  
-CMD ["flask", "run"]
+CMD ["python", "./webApp/app.py"]
