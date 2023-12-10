@@ -42,7 +42,6 @@ jobs:
 
     - name: Build the Docker image
       run: |
-          cd src/db 
           docker build . --file Dockerfile --tag mlopsmystics:latest
 
     - name: Push Docker iamge
