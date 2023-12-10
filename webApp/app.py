@@ -1,9 +1,10 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from datetime import datetime
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 import joblib
 from mlflow.tracking import MlflowClient
+import mlflow as mlflow
 
 
 
@@ -17,7 +18,12 @@ def load_model(model_name):
     return model
 
 # Load your trained model
-model = load_model('rf-model')
+model = load_model('ReadingPredictor')
+
+@app.route('/', methods=['GET'])
+def index():
+    # Render the HTML page when the user accesses the root URL
+    return render_template('index.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -26,7 +32,7 @@ def predict():
     date_str = data['date']
 
     # Convert string to datetime object
-    date = datetime.strptime(date_str, '%Y-%m-%d %H:%M:%S')
+    date = datetime.strptime(date_str, '%Y-%m-%dT%H:%M')
 
     # Extract features
     hour_of_day = date.hour
