@@ -8,8 +8,8 @@ stages:
     deps:
       - ./data/prepare_data.py
       - ./data/dummy_sensor_data.csv
-  pull_data:
-    cmd: dvc pull
+  # pull_data:
+  #   cmd: dvc pull
   add_dummy_sensor_data:
     cmd: |
       dvc add ./data/dummy_sensor_data.csv
@@ -22,5 +22,5 @@ stages:
   # push_data:
   #   cmd: |
   #     dvc push
-  # train_model:
-  #   cmd: python ./train/train.py
+  train_model:
+    cmd: python ./train/train.py
