@@ -28,6 +28,11 @@ jobs:
     - name: Setup DVC
       uses: iterative/setup-dvc@v1
 
+    - name: Configure DVC remote
+      run: |
+        echo "${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON_1 }}" > service_account.json
+        dvc remote modify zahid gdrive_user_credentials_file ./service_account.json
+
     - name: Pull data from DVC remote
       run: |
         dvc pull
