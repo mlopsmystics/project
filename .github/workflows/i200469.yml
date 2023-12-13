@@ -33,9 +33,12 @@ jobs:
         echo "${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON_1 }}" > service_account.json
         dvc remote modify zahid gdrive_user_credentials_file ./service_account.json
 
-    - name: Pull data from DVC remote
+    # - name: Pull data from DVC remote
+    #   run: |
+    #     dvc pull
+    - name: Run DVC pipeline
       run: |
-        dvc pull
+        dvc repro
     - uses: actions/checkout@v3
     - name: Docker Login
       uses: docker/login-action@v3.0.0
