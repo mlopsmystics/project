@@ -25,14 +25,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     
-    - name: Configure DVC remote
-      run: |
-        echo "${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON_1 }}" > service_account.json
-        dvc remote modify zahid gdrive_user_credentials_file ./service_account.json
+    - name: Setup DVC
+      uses: iterative/setup-dvc@v1
 
-    - name: Run DVC pipeline
+    - name: Pull data from DVC remote
       run: |
-        dvc repro
+        dvc pull
     - uses: actions/checkout@v3
     - name: Docker Login
       uses: docker/login-action@v3.0.0
