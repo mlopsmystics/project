@@ -35,7 +35,7 @@ jobs:
           dvc remote modify zahid gdrive_client_id '${{secrets.GDRIVE_SERVICE_ACCOUNT_JSON_1}}'
     - name: Pull data from DVC remote
       run: |
-        dvc --version
+        config --system core.longpaths true
         dvc pull
     - name: Run DVC pipeline
       run: |
