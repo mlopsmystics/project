@@ -17,6 +17,8 @@ jobs:
         run: |
           pip install dvc[gdrive] pandas
           pip install pyopenssl
+          sudo apt-get update
+          sudo apt-get install openssl
           dvc --version
           dvc remote add -f myremote gdrive://1oQzugom2dKDOulBprzcIOwaNiBJDksZj
           dvc remote modify myremote gdrive_client_id '${{secrets.GDRIVE_SERVICE_ACCOUNT_JSON_1}}'
