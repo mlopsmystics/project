@@ -32,7 +32,8 @@ jobs:
       run: |
           pip install dvc[gdrive] pandas
           dvc --version
-          dvc remote modify zahid gdrive_user_credentials_data "${{secrets.GDRIVE_SERVICE_ACCOUNT_JSON_1}}"
+          echo "${{secrets.GDRIVE_SERVICE_ACCOUNT_JSON_1}}" > gdrive_sa.json
+          dvc remote modify zahid gdrive_client_id gdrive_sa.json
     - name: Pull data from DVC remote
       run: |
         dvc remote list
