@@ -33,6 +33,7 @@ jobs:
           pip install dvc[gdrive] pandas
           dvc --version
           echo "${{secrets.GDRIVE_SERVICE_ACCOUNT_JSON_1}}" > gdrive_sa.json
+          ls -l gdrive_sa.json
           dvc remote modify zahid gdrive_client_id gdrive_sa.json
     - name: Pull data from DVC remote
       run: |
