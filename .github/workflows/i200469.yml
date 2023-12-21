@@ -1,6 +1,8 @@
 name: Simulate Sensor Data Addition
 on:
-  workflow_dispatch:
+  push:
+      branches:
+        - i200469
 
 jobs:
   build:
