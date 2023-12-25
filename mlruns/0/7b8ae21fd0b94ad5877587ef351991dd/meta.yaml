@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/7b8ae21fd0b94ad5877587ef351991dd/artifacts
+end_time: 1703531256044
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7b8ae21fd0b94ad5877587ef351991dd
+run_name: persistent-bear-263
+run_uuid: 7b8ae21fd0b94ad5877587ef351991dd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703531215836
+status: 3
+tags: []
+user_id: Zahid imran

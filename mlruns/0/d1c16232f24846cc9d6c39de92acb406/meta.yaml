@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/d1c16232f24846cc9d6c39de92acb406/artifacts
+end_time: 1703531256044
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d1c16232f24846cc9d6c39de92acb406
+run_name: rare-stork-266
+run_uuid: d1c16232f24846cc9d6c39de92acb406
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703531215836
+status: 3
+tags: []
+user_id: Zahid imran

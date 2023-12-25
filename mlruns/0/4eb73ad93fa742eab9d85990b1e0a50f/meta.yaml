@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/4eb73ad93fa742eab9d85990b1e0a50f/artifacts
+end_time: 1703531256044
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4eb73ad93fa742eab9d85990b1e0a50f
+run_name: righteous-mouse-233
+run_uuid: 4eb73ad93fa742eab9d85990b1e0a50f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703531215836
+status: 3
+tags: []
+user_id: Zahid imran
