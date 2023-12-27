@@ -25,7 +25,7 @@ stages:
   add_test_data:
     cmd: "dvc add ./data/prepared/test.csv\n"
   push_data:
-    cmd: dvc push
+    cmd: "dvc push\n"
   pull_data:
     cmd: dvc pull
   train_model:

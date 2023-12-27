@@ -1,5 +1,6 @@
 venv/
 .vscode/
+mlruns/
 /data/dummy_sensor_data.csv
 /data/prepared/test.csv
 /data/prepared/train.csv
