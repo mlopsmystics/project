@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/c80ab7e9ef6046db939eaa628c928f5c/artifacts
+end_time: 1703694581095
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c80ab7e9ef6046db939eaa628c928f5c
+run_name: languid-sponge-1
+run_uuid: c80ab7e9ef6046db939eaa628c928f5c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703694536279
+status: 3
+tags: []
+user_id: Zahid imran
