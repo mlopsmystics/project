@@ -34,12 +34,10 @@ jobs:
           dvc --version
           dvc remote modify zahid gdrive_client_id '${{secrets.GDRIVE_SERVICE_ACCOUNT_JSON_1}}'
     - name: Pull data from DVC remote
+      env:
+        GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON_1 }}
       run: |
-        dvc remote list
         dvc pull
-    - name: Run DVC pipeline
-      run: |
-        dvc repro
     - uses: actions/checkout@v3
     - name: Docker Login
       uses: docker/login-action@v3.0.0
