@@ -34,7 +34,7 @@ jobs:
       env:
         GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
       run: |
-        dvc pull
+        dvc pull --force
     - uses: actions/checkout@v3
     - name: Docker Login
       uses: docker/login-action@v3.0.0
