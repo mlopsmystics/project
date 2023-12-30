@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/eb332c9517bf4b4ba5b1f123f8d5a49d/artifacts
+end_time: 1703961835434
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: eb332c9517bf4b4ba5b1f123f8d5a49d
+run_name: shivering-lynx-227
+run_uuid: eb332c9517bf4b4ba5b1f123f8d5a49d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703961817509
+status: 3
+tags: []
+user_id: Zahid imran

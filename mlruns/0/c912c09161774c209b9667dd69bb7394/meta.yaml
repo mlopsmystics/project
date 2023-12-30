@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/c912c09161774c209b9667dd69bb7394/artifacts
+end_time: 1703961842961
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c912c09161774c209b9667dd69bb7394
+run_name: brawny-fox-508
+run_uuid: c912c09161774c209b9667dd69bb7394
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703961817509
+status: 3
+tags: []
+user_id: Zahid imran

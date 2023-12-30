@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/abc61836bfb646b7b5c9cd5920428439/artifacts
+end_time: 1703961835434
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: abc61836bfb646b7b5c9cd5920428439
+run_name: charming-loon-742
+run_uuid: abc61836bfb646b7b5c9cd5920428439
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703961817509
+status: 3
+tags: []
+user_id: Zahid imran

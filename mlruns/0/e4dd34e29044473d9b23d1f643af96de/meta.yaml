@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/e4dd34e29044473d9b23d1f643af96de/artifacts
+end_time: 1703961776298
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e4dd34e29044473d9b23d1f643af96de
+run_name: flawless-fish-559
+run_uuid: e4dd34e29044473d9b23d1f643af96de
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703961758479
+status: 3
+tags: []
+user_id: Zahid imran
