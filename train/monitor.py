@@ -36,21 +36,13 @@ def monitor(data_path):
     # Log metrics
     mse = evaluate(model, X_test, y_test)
     if mse > 80.0:
-        print("Model accuracy is above threshold")
+        print("Model accuracy is under threshold")
         print("mse:: ", mse)
+        subprocess.call(['python', 'train/train.py'])
     else:
-        print("Model accuracy is under  threshold")
+        print("Model accuracy is good enough")
         print("mse::", mse)
 
-        # Set execution policy (if necessary)
-        # subprocess.call(['powershell', 'Set-ExecutionPolicy', 'RemoteSigned', '-Scope', 'Process'])
-
-        # # Activate virtual environment (if using 'activate' script)
-        # subprocess.call(['venv\Scripts\activate'])
-
-        # Execute training script
-
-        subprocess.call(['python', 'train/train.py'])
 
 
 if __name__=="__main__":
