@@ -42,6 +42,8 @@ jobs:
         python ./train/monitor.py
       
     - name: DVC Add and Commit
+      env:
+         MLFLOW_TRACKING_URI: ./mlruns
       run: |
         git add . 
         git commit -m "DVC repro run sucessfully"
