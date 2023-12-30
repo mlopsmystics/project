@@ -25,11 +25,15 @@ jobs:
 
     - name: Setup DVC
       uses: iterative/setup-dvc@v1
+
     
     - name: Set Git user information
       run: |
         git config --global user.email "actions@github.com"
         git config --global user.name "GitHub Actions"
+    - name: Set MLflow artifact location
+      run: |
+         export MLFLOW_ARTIFACT_LOCATION=/home/runner/work
     - name: DVC repro
       env:
         GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
