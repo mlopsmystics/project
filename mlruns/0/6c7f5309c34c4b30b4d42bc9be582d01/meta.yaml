@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/6c7f5309c34c4b30b4d42bc9be582d01/artifacts
+end_time: 1703974113431
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6c7f5309c34c4b30b4d42bc9be582d01
+run_name: shivering-quail-425
+run_uuid: 6c7f5309c34c4b30b4d42bc9be582d01
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703974102475
+status: 4
+tags: []
+user_id: runner
