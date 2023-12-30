@@ -31,11 +31,17 @@ jobs:
       run: |
         git config --global user.email "actions@github.com"
         git config --global user.name "GitHub Actions"
-    - name: DVC repro
+    - name: DVC Operations
       env:
         GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
       run: |
-        dvc repro
+        dvc pull
+        python ./data/random_data.py
+        python ./data/prepare_data.py
+        dvc add ./data/dummy_sensor_data.csv
+        dvc add ./data/prepared/train.csv
+        dvc add ./data/prepared/test.csv
+        dvc push
     
     - name: Monitor Performmance
       run: |

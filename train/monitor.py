@@ -30,18 +30,19 @@ def monitor(data_path):
         accuracy = 100 - mape
         return accuracy
     
-    # Load model
+    # # Load model
     model = load_model("./webApp/model.pkl")
 
-    # Evaluate model
+    # # Evaluate model
     mse = evaluate(model, X_test, y_test)
-    if mse > 80.0:
-        print("Model accuracy is good enough")
-        print("mse:: ", mse)
-    else:
-        print("Model accuracy is under 80%")
-        print("mse::", mse)
-        subprocess.call(['python', 'train/train.py'])
+    print("mse:: ", mse)
+    # if mse > 80.0:
+    #     print("Model accuracy is good enough")
+    #     print("mse:: ", mse)
+    # else:
+    #     print("Model accuracy is under 80%")
+    #     print("mse::", mse)
+    #     subprocess.call(['python', 'train/train.py'])
 
 
 
