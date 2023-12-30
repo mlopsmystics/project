@@ -50,7 +50,7 @@ def monitor(data_path):
 
         # Execute training script
 
-        subprocess.call(['python', './train/train.py'])
+        subprocess.call(['python', 'train/train.py'])
 
 
 if __name__=="__main__":
