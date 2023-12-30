@@ -57,6 +57,9 @@ def train(data_path):
         # Log metrics
         mse = evaluate(model, X_test, y_test)
         mlflow.log_metric("mse", mse)
+
+        # set the tracking uri
+        mlflow.set_tracking_uri("mlruns") 
             
         # Register the best model
         mlflow.sklearn.log_model(model.best_estimator_, "rf-model")
