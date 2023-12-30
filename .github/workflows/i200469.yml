@@ -3,9 +3,7 @@ name: MLOps Workflow
 on:
   schedule:
     - cron: '0 */1 * * *'
-  push:
-    branches:
-      - i200469
+  
 
 jobs:
   build:
@@ -41,18 +39,20 @@ jobs:
         dvc add ./data/dummy_sensor_data.csv
         dvc add ./data/prepared/train.csv
         dvc add ./data/prepared/test.csv
+        git add .
+        git commit -m "DVC data updated"
+        git push
         dvc push
     
     - name: Monitor Performmance
+      env:
+        MLFLOW_TRACKING_URI: ./mlruns
       run: |
         python ./train/monitor.py
-      
-    - name: DVC Add and Commit
-      env:
-         MLFLOW_TRACKING_URI: ./mlruns
-      run: |
         git add . 
-        git commit -m "DVC repro run sucessfully"
+        git commit -m "Monitor Checked"
+        git push
+
     - uses: actions/checkout@v3
     - name: Docker Login
       uses: docker/login-action@v3.0.0
