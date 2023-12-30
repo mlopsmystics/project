@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/ffca0f5b7ccc472d948f00a5e7b7ea09/artifacts
+end_time: 1703958819956
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ffca0f5b7ccc472d948f00a5e7b7ea09
+run_name: gaudy-moose-696
+run_uuid: ffca0f5b7ccc472d948f00a5e7b7ea09
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703958774856
+status: 3
+tags: []
+user_id: Zahid imran

@@ -34,7 +34,7 @@ def monitor(data_path):
         return accuracy
     
     # Load model
-    model=load_model("ReadingPredictor")
+    model=load_model("rf_model")
     # Log metrics
     mse = evaluate(model, X_test, y_test)
     if mse > 72.0:

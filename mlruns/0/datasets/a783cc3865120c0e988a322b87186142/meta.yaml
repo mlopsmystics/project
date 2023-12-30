@@ -1,0 +1,8 @@
+digest: f9369263
+name: dataset
+profile: '{"num_rows": 450, "num_elements": 1350}'
+schema: '{"mlflow_colspec": [{"type": "long", "name": "hour_of_day"}, {"type": "long",
+  "name": "day_of_week"}, {"type": "long", "name": "year"}]}'
+source: '{"tags": {"mlflow.user": "Zahid imran", "mlflow.source.name": "./train/train.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "ac94cfc1f5adf2f8e8fbb8a05653c6f149112f1d"}}'
+source_type: code

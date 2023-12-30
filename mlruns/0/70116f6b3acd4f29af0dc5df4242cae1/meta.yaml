@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/70116f6b3acd4f29af0dc5df4242cae1/artifacts
+end_time: 1703958819956
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 70116f6b3acd4f29af0dc5df4242cae1
+run_name: judicious-auk-877
+run_uuid: 70116f6b3acd4f29af0dc5df4242cae1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703958774856
+status: 3
+tags: []
+user_id: Zahid imran

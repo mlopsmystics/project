@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/9b896f75ae7f4417b5a3fbc1d3f28445/artifacts
+end_time: 1703958819956
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9b896f75ae7f4417b5a3fbc1d3f28445
+run_name: marvelous-moose-279
+run_uuid: 9b896f75ae7f4417b5a3fbc1d3f28445
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703958774856
+status: 3
+tags: []
+user_id: Zahid imran
