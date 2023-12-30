@@ -36,13 +36,13 @@ def monitor(data_path):
     # # Evaluate model
     mse = evaluate(model, X_test, y_test)
     print("mse:: ", mse)
-    # if mse > 80.0:
-    #     print("Model accuracy is good enough")
-    #     print("mse:: ", mse)
-    # else:
-    #     print("Model accuracy is under 80%")
-    #     print("mse::", mse)
-    #     subprocess.call(['python', 'train/train.py'])
+    if mse > 70.0:
+        print("Model accuracy is good enough")
+        print("mse:: ", mse)
+    else:
+        print("Model accuracy is under 80%")
+        print("mse::", mse)
+        subprocess.call(['python', 'train/train.py'])
 
 
 
