@@ -35,7 +35,7 @@ def monitor(data_path):
 
     # Log metrics
     mse = evaluate(model, X_test, y_test)
-    if mse > 72.0:
+    if mse > 80.0:
         print("Model accuracy is above threshold")
         print("mse:: ", mse)
     else:
