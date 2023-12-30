@@ -39,7 +39,7 @@ jobs:
     
     - name: Monitor Performmance
       run: |
-        python /train/monitor.py
+        python ./train/monitor.py
       
     - name: DVC Add and Commit
       run: |
