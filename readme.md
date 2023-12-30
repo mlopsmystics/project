@@ -1,4 +1,4 @@
-
+[![MLOps Workflow](https://github.com/mlopsmystics/project/actions/workflows/i200469.yml/badge.svg?branch=i200469)](https://github.com/mlopsmystics/project/actions/workflows/i200469.yml)
 readme_for_env
 
 # MLOPS
