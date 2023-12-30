@@ -39,7 +39,7 @@ def monitor(data_path):
         print("Model accuracy is above threshold")
         print("mse:: ", mse)
     else:
-        print("Model accuracy is  threshold")
+        print("Model accuracy is under  threshold")
         print("mse::", mse)
 
         # Set execution policy (if necessary)
