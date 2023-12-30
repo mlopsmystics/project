@@ -62,7 +62,7 @@ def train(data_path):
         mlflow.sklearn.log_model(model.best_estimator_, "rf-model")
         mlflow.sklearn.log_model(model, "rf-model")
         model_uri = mlflow.get_artifact_uri('rf-model')
-        mlflow.register_model(model_uri, "ReadingPredictor")
+        mlflow.register_model(model_uri, "rf-model")
     
     print("Best parameters:", model.best_params_)
     
