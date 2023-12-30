@@ -3,7 +3,9 @@ name: MLOps Workflow
 on:
   schedule:
     - cron: '0 */1 * * *'
-  
+  push:
+    branches:
+      - i200469
 
 jobs:
   build:
