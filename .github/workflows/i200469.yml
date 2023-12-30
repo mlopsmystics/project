@@ -31,14 +31,16 @@ jobs:
       run: |
         git config --global user.email "actions@github.com"
         git config --global user.name "GitHub Actions"
-    - name: Set MLflow artifact location
-      run: |
-         export MLFLOW_ARTIFACT_LOCATION=/home/runner/work
     - name: DVC repro
       env:
         GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
       run: |
         dvc repro
+    
+    - name: Monitor Performmance
+      run: |
+        python /train/monitor.py
+      
     - name: DVC Add and Commit
       run: |
         git add . 
