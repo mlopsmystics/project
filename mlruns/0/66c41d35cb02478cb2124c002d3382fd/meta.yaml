@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/66c41d35cb02478cb2124c002d3382fd/artifacts
+end_time: 1703963632929
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 66c41d35cb02478cb2124c002d3382fd
+run_name: luxuriant-seal-686
+run_uuid: 66c41d35cb02478cb2124c002d3382fd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703963612112
+status: 3
+tags: []
+user_id: Zahid imran

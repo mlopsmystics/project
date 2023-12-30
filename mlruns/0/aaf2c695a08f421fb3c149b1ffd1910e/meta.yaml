@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/aaf2c695a08f421fb3c149b1ffd1910e/artifacts
+end_time: 1703963632929
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: aaf2c695a08f421fb3c149b1ffd1910e
+run_name: lyrical-squid-789
+run_uuid: aaf2c695a08f421fb3c149b1ffd1910e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703963612112
+status: 3
+tags: []
+user_id: Zahid imran
