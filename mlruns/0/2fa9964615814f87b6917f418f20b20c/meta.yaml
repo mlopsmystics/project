@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/2fa9964615814f87b6917f418f20b20c/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2fa9964615814f87b6917f418f20b20c
+run_name: tasteful-snail-329
+run_uuid: 2fa9964615814f87b6917f418f20b20c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703959476071
+status: 1
+tags: []
+user_id: Zahid imran
