@@ -1,5 +1,5 @@
 artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/1f781cdaf08f427e8f7846340ff28232/artifacts
-end_time: null
+end_time: 1703958945064
 entry_point_name: ''
 experiment_id: '0'
 lifecycle_stage: active
@@ -10,6 +10,6 @@ source_name: ''
 source_type: 4
 source_version: ''
 start_time: 1703958895382
-status: 1
+status: 3
 tags: []
 user_id: Zahid imran
