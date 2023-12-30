@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/9e62dcd9836746798c618af59aab87c0/artifacts
+end_time: 1703959960485
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9e62dcd9836746798c618af59aab87c0
+run_name: painted-mole-414
+run_uuid: 9e62dcd9836746798c618af59aab87c0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703959916085
+status: 3
+tags: []
+user_id: Zahid imran

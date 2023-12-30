@@ -13,10 +13,7 @@ import virtualenv
 warnings.filterwarnings("ignore")
 
 def load_model(model_name):
-    client = MlflowClient()
-    model_versions = client.search_model_versions(f"name='{model_name}'")
-    latest_model_version = model_versions[0].version
-    model = mlflow.pyfunc.load_model(f"models:/{model_name}/{latest_model_version}")
+    model=joblib.load(model_name)
     return model
 
 def monitor(data_path):
@@ -34,8 +31,7 @@ def monitor(data_path):
         return accuracy
     
     # Load model
-    model_uri = mlflow.get_artifact_uri("rf-model")
-    model = mlflow.sklearn.load_model(model_uri)
+    model = load_model("./webApp/model.pkl")
 
     # Log metrics
     mse = evaluate(model, X_test, y_test)

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/eed1ab2dc11a4ff9b1646e12b98b6b55/artifacts
+end_time: 1703959948968
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: eed1ab2dc11a4ff9b1646e12b98b6b55
+run_name: zealous-horse-808
+run_uuid: eed1ab2dc11a4ff9b1646e12b98b6b55
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703959916085
+status: 3
+tags: []
+user_id: Zahid imran
