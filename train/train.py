@@ -27,17 +27,17 @@ def load_model(model_name):
 def train(data_path):
 
     df = pd.read_csv(data_path+'train.csv')
-    print(df.head())
     df_test = pd.read_csv(data_path+'test.csv')
-    print(df_test.head())
     X = df[['hour_of_day','day_of_week','year']] 
     y = df['Reading']
 
     def evaluate(model, X_test, y_test):
+        print(X_test, y_test)
         predictions = model.predict(X_test)
         errors = abs(predictions - y_test)
         mape = 100 * np.mean(errors / y_test)
         accuracy = 100 - mape
+        print("Accuracy:", accuracy)
         return accuracy
 
     X_test = df_test[['hour_of_day','day_of_week','year']]
