@@ -57,7 +57,7 @@ def train(data_path):
     print("Finished Training")
     print("++++++++++++++++++++++++++++++++++++++++")
     print("Evaluating model...")
-    mse = evaluate(model, X_test, y_test)
+    mse = evaluate_mae(model, X_test, y_test)
     print("Finished Evaluating")
     # Show Results
     print("+++++++++++++++++++++++++++++++++++++++")
