@@ -46,6 +46,7 @@ jobs:
         git add .
         git commit -m "DVC data updated and Monitoring performed"
         git push
+        dvc commit -m "DVC data updated and Monitoring performed"
         dvc push
 
     - uses: actions/checkout@v3
