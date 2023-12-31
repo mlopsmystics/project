@@ -33,7 +33,7 @@ def monitor(data_path):
     model = load_model("./webApp/model.pkl")
 
     # # Evaluate model
-    mae = evaluate(model, X_test, y_test)
+    mae = evaluate_mae(model, X_test, y_test)
     print("mae:: ", mae)
     if mae > 0.10:
         print("Model accuracy is good enough")
