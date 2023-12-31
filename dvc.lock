@@ -1,0 +1,11 @@
+schema: '2.0'
+stages:
+  pull_data:
+    cmd: dvc pull
+  add_data:
+    cmd: python ./data/random_data.py
+    deps:
+    - path: ./data/random_data.py
+      hash: md5
+      md5: f8ca7ea00e73f8ee34a52008f22ca166
+      size: 2596
