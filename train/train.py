@@ -6,7 +6,10 @@ import mlflow
 import mlflow.sklearn
 from mlflow.tracking import MlflowClient
 import joblib
+import os
 import json
+import pickle
+import datetime
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -41,7 +44,7 @@ def train(data_path):
     # Define hyperparameter grid
     param_grid = {
         'n_estimators': [50, 100, 200],
-        'max_depth': [5, 8, 15]
+        'max_depth': [5, 8, 20]
     }
 
 
@@ -52,12 +55,11 @@ def train(data_path):
     # Train model
     print("Training model...")
     model.fit(X, y)
-
-    # Log metrics
-    mse = evaluate(model, X_test, y_test) 
-    with open("metrics.json") as f:
-        metrics = json.load(f) 
-
+    print("Finished Training")
+    print("++++++++++++++++++++++++++++++++++++++++")
+    print("Evaluating model...")
+    mse = evaluate(model, X_test, y_test)
+    print("Finished Evaluating")
     # Show Results
     print("+++++++++++++++++++++++++++++++++++++++")
     print("Results:")
@@ -67,13 +69,29 @@ def train(data_path):
     print("Best estimator:", model.best_estimator_)
     print("Best index:", model.best_index_)
     print("Scorer function:", model.scorer_)
+
+
+    # Log metrics
+    metrics_file = "./train/model_regsistery/metrics.json"
+
+    run_id = datetime.datetime.now().strftime("%Y%m%d%H%M%S") # returns unique run string for mlflow tracking
+    if not os.path.exists(metrics_file):
+        with open(metrics_file, "w") as f:
+            json.dump({}, f)  # create empty dict
+
+    with open(metrics_file) as f:
+        metrics = json.load(f)
     metrics[run_id] = {"mse": mse}
-    with open("metrics.json", "w") as f:
-        json.dump(metrics, f)
+
 
     # Save model
-    with open(f"models/run_{run_id}/model.pkl", "wb") as f:
+    model_dir = f"./train/model_regsistery/models/run_{run_id}"
+    if not os.path.exists(model_dir):
+        os.makedirs(model_dir)
+
+    with open(os.path.join(model_dir, "model.pkl"), "wb") as f:
         pickle.dump(model.best_estimator_, f)
+
     # Save the model to the ./webApp directory
     joblib.dump(model.best_estimator_, './webApp/model.pkl')
 
@@ -81,17 +99,24 @@ def train(data_path):
     model_info = {
         "model_uri": f"models/run_{run_id}/model.pkl",
         "run_id": run_id,
-        "model_params": model.best_params_,  
+        "model_params": model.best_params_,
         "dataset": "my dataset",
         "metrics": metrics[run_id]
     }
-    with open("registered_models.json") as f:
+
+    model_registry_file = "./train/model_regsistery/registered_models.json"
+    if not os.path.exists(model_registry_file):
+        with open(model_registry_file, "w") as f:
+            json.dump([], f)
+
+    with open(model_registry_file) as f:
         model_registry = json.load(f)
-    model_registry.append(model_info) 
-    with open("registered_models.json", "w") as f:
+
+    model_registry.append(model_info)
+    with open(model_registry_file, "w") as f:
         json.dump(model_registry, f)
 
-    print("Finished Training")
+    print("Finished")
 
     # with mlflow.start_run() as run:
     #     print("MLflow:")
