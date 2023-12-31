@@ -6,6 +6,7 @@ import mlflow
 import mlflow.sklearn
 from mlflow.tracking import MlflowClient
 import joblib
+import json
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -43,30 +44,72 @@ def train(data_path):
         'max_depth': [5, 8, 15]
     }
 
-    # Initialize MLflow autologging
-    mlflow.sklearn.autolog()
 
     # Train model with hyperparameter tuning
     rf = RandomForestRegressor()
     model = GridSearchCV(rf, param_grid)
 
-    with mlflow.start_run() as run:
-        print("MLflow:")
-        model.fit(X, y)
-        
-        # Log metrics
-        mse = evaluate(model, X_test, y_test)
-        mlflow.log_metric("mse", mse)
-        # set the tracking uri
-        mlflow.set_tracking_uri("mlruns") 
-            
-        # Register the best model
-        mlflow.sklearn.log_model(model.best_estimator_, "rf-model")
-        mlflow.sklearn.log_model(model, "rf-model")
-        model_uri = mlflow.get_artifact_uri('rf-model')
-        mlflow.register_model(model_uri, "rf-model")
-    
+    # Train model
+    print("Training model...")
+    model.fit(X, y)
+
+    # Log metrics
+    mse = evaluate(model, X_test, y_test) 
+    with open("metrics.json") as f:
+        metrics = json.load(f) 
+
+    # Show Results
+    print("+++++++++++++++++++++++++++++++++++++++")
+    print("Results:")
+    print("mse:", mse)
     print("Best parameters:", model.best_params_)
+    print("Best score:", model.best_score_)
+    print("Best estimator:", model.best_estimator_)
+    print("Best index:", model.best_index_)
+    print("Scorer function:", model.scorer_)
+    metrics[run_id] = {"mse": mse}
+    with open("metrics.json", "w") as f:
+        json.dump(metrics, f)
+
+    # Save model
+    with open(f"models/run_{run_id}/model.pkl", "wb") as f:
+        pickle.dump(model.best_estimator_, f)
+    # Save the model to the ./webApp directory
+    joblib.dump(model.best_estimator_, './webApp/model.pkl')
+
+    # Register model
+    model_info = {
+        "model_uri": f"models/run_{run_id}/model.pkl",
+        "run_id": run_id,
+        "model_params": model.best_params_,  
+        "dataset": "my dataset",
+        "metrics": metrics[run_id]
+    }
+    with open("registered_models.json") as f:
+        model_registry = json.load(f)
+    model_registry.append(model_info) 
+    with open("registered_models.json", "w") as f:
+        json.dump(model_registry, f)
+
+    print("Finished Training")
+
+    # with mlflow.start_run() as run:
+    #     print("MLflow:")
+    #     model.fit(X, y)
+        
+    #     # Log metrics
+    #     mse = evaluate(model, X_test, y_test)
+    #     mlflow.log_metric("mse", mse)
+    #     # set the tracking uri
+    #     mlflow.set_tracking_uri("mlruns") 
+            
+    #     # Register the best model
+    #     mlflow.sklearn.log_model(model.best_estimator_, "rf-model")
+    #     mlflow.sklearn.log_model(model, "rf-model")
+    #     model_uri = mlflow.get_artifact_uri('rf-model')
+    #     mlflow.register_model(model_uri, "rf-model")
+    
+    # print("Best parameters:", model.best_params_)
     
 if __name__=="__main__":
     data_path = "./data/prepared/"
