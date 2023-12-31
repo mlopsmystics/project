@@ -139,4 +139,3 @@ def train(data_path):
 if __name__=="__main__":
     data_path = "./data/prepared/"
     train(data_path)
-    load_model("rf-model")

@@ -1,8 +1,0 @@
-digest: 250514d8
-name: dataset
-profile: '{"num_rows": 2700, "num_elements": 8100}'
-schema: '{"mlflow_colspec": [{"type": "long", "name": "hour_of_day"}, {"type": "long",
-  "name": "day_of_week"}, {"type": "long", "name": "year"}]}'
-source: '{"tags": {"mlflow.user": "runner", "mlflow.source.name": "train/train.py",
-  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "401fda7497f2882d792c010f86c140db173c0197"}}'
-source_type: code
