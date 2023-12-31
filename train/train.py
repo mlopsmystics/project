@@ -27,7 +27,9 @@ def load_model(model_name):
 def train(data_path):
 
     df = pd.read_csv(data_path+'train.csv')
+    print(df.head())
     df_test = pd.read_csv(data_path+'test.csv')
+    print(df_test.head())
     X = df[['hour_of_day','day_of_week','year']] 
     y = df['Reading']
 
