@@ -27,7 +27,7 @@ jobs:
       uses: iterative/setup-dvc@v1
 
     
-    - name: Set Git user information
+    - name: Set Git user information, perform dvc operations and check model performace 
       run: |
         git config --global user.email "actions@github.com"
         git config --global user.name "GitHub Actions"
@@ -41,19 +41,12 @@ jobs:
         dvc add ./data/dummy_sensor_data.csv
         dvc add ./data/prepared/train.csv
         dvc add ./data/prepared/test.csv
+        python ./train/monitor.py
         git add .
         git commit -m "DVC data updated"
         git push
         dvc push
     
-    - name: Monitor Performmance
-      env:
-        MLFLOW_TRACKING_URI: ./mlruns
-      run: |
-        python ./train/monitor.py
-        git add . 
-        git commit -m "Monitor Checked"
-        git push
 
     - uses: actions/checkout@v3
     - name: Docker Login
