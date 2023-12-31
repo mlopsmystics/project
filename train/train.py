@@ -35,15 +35,11 @@ def train(data_path):
     X_test = df_test[['hour_of_day','day_of_week','year']]
     y_test = df_test['Reading']
 
-    def evaluate(model, X_test, y_test):
-        print(X_test, y_test)
+    def evaluate_mae(model, X_test, y_test):
         predictions = model.predict(X_test)
-        errors = abs(predictions - y_test)
-        print("Errors:", errors)
-        mape = 100 * np.mean(errors / y_test)
-        print("Accuracy:", mape)
-        accuracy = 100 - mape
-        return accuracy
+        mae = np.mean(abs(predictions - y_test))  # Calculate mean absolute error
+        print("Mean Absolute Error:", mae)
+        return mae
     # Define hyperparameter grid
     param_grid = {
         'n_estimators': [50, 100, 200],
