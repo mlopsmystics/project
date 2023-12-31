@@ -22,6 +22,3 @@ stages:
   push_data:
     cmd: |
       dvc push
-  train_model:
-    cmd: |
-      python ./train/monitor.py
