@@ -23,15 +23,6 @@ def load_model(model_name):
     # Save the model to the ./webApp directory
     joblib.dump(model, './webApp/model.pkl')
 
-    def evaluate(model, X_test, y_test):
-        print(X_test, y_test)
-        predictions = model.predict(X_test)
-        errors = abs(predictions - y_test)
-        print("Errors:", errors)
-        mape = 100 * np.mean(errors / y_test)
-        print("Accuracy:", mape)
-        accuracy = 100 - mape
-        return accuracy
 
 def train(data_path):
 
@@ -44,6 +35,15 @@ def train(data_path):
     X_test = df_test[['hour_of_day','day_of_week','year']]
     y_test = df_test['Reading']
 
+    def evaluate(model, X_test, y_test):
+        print(X_test, y_test)
+        predictions = model.predict(X_test)
+        errors = abs(predictions - y_test)
+        print("Errors:", errors)
+        mape = 100 * np.mean(errors / y_test)
+        print("Accuracy:", mape)
+        accuracy = 100 - mape
+        return accuracy
     # Define hyperparameter grid
     param_grid = {
         'n_estimators': [50, 100, 200],
