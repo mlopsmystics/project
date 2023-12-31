@@ -35,7 +35,7 @@ def monitor(data_path):
     # # Evaluate model
     mae = evaluate_mae(model, X_test, y_test)
     print("mae:: ", mae)
-    if mae > 0.10:
+    if mae > 0.09:
         print("Model accuracy is good enough")
         print("mae:: ", mae)
     else:

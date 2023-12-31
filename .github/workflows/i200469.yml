@@ -42,11 +42,11 @@ jobs:
         dvc add ./data/prepared/train.csv
         dvc add ./data/prepared/test.csv
         python ./train/monitor.py
+        dvc add ./train/model_regsistery
         git add .
         git commit -m "DVC data updated and Monitoring performed"
         git push
         dvc push
-    
 
     - uses: actions/checkout@v3
     - name: Docker Login
