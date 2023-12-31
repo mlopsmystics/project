@@ -9,7 +9,6 @@ import joblib
 import subprocess
 import os
 import warnings
-import virtualenv
 warnings.filterwarnings("ignore")
 
 def load_model(model_name):
