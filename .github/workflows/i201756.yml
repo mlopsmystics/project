@@ -41,6 +41,8 @@ jobs:
         dvc add ./data/dummy_sensor_data.csv
         dvc add ./data/prepared/train.csv
         dvc add ./data/prepared/test.csv
+        python ./train/train.py
+        dvc add mlruns
         git add .
         git commit -m "DVC data updated"
         git push

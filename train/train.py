@@ -57,16 +57,19 @@ def train(data_path):
         # Log metrics
         mse = evaluate(model, X_test, y_test)
         mlflow.log_metric("mse", mse)
+
+        # set the tracking uri
+        mlflow.set_tracking_uri("mlruns") 
             
         # Register the best model
         mlflow.sklearn.log_model(model.best_estimator_, "rf-model")
         mlflow.sklearn.log_model(model, "rf-model")
         model_uri = mlflow.get_artifact_uri('rf-model')
-        mlflow.register_model(model_uri, "ReadingPredictor")
+        mlflow.register_model(model_uri, "rf-model")
     
     print("Best parameters:", model.best_params_)
     
 if __name__=="__main__":
     data_path = "./data/prepared/"
     train(data_path)
-    load_model("ReadingPredictor")
+    load_model("rf-model")

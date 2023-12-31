@@ -6,3 +6,5 @@ venv/
 /.dvc/tmp
 /.dvc/cache
 /.dvc/config.local
+/gdrive.json
+/mlruns

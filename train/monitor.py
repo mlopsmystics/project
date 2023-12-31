@@ -9,13 +9,11 @@ import joblib
 import subprocess
 import os
 import warnings
+import virtualenv
 warnings.filterwarnings("ignore")
 
 def load_model(model_name):
-    client = MlflowClient()
-    model_versions = client.search_model_versions(f"name='{model_name}'")
-    latest_model_version = model_versions[0].version
-    model = mlflow.pyfunc.load_model(f"models:/{model_name}/{latest_model_version}")
+    model=joblib.load(model_name)
     return model
 
 def monitor(data_path):
@@ -32,26 +30,20 @@ def monitor(data_path):
         accuracy = 100 - mape
         return accuracy
     
-    # Load model
-    model=load_model("ReadingPredictor")
-    # Log metrics
+    # # Load model
+    model = load_model("./webApp/model.pkl")
+
+    # # Evaluate model
     mse = evaluate(model, X_test, y_test)
-    if mse > 72.0:
-        print("Model accuracy is above threshold")
+    print("mse:: ", mse)
+    if mse > 70.0:
+        print("Model accuracy is good enough")
         print("mse:: ", mse)
     else:
-        print("Model accuracy is  threshold")
+        print("Model accuracy is under 80%")
         print("mse::", mse)
+        subprocess.call(['python', 'train/train.py'])
 
-        # Set execution policy (if necessary)
-        # subprocess.call(['powershell', 'Set-ExecutionPolicy', 'RemoteSigned', '-Scope', 'Process'])
-
-        # # Activate virtual environment (if using 'activate' script)
-        # subprocess.call(['venv\Scripts\activate'])
-
-        # Execute training script
-
-        subprocess.call(['python', './train/train.py'])
 
 
 if __name__=="__main__":
