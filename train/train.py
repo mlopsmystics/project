@@ -57,12 +57,12 @@ def train(data_path):
     print("Finished Training")
     print("++++++++++++++++++++++++++++++++++++++++")
     print("Evaluating model...")
-    mse = evaluate_mae(model, X_test, y_test)
+    mae = evaluate_mae(model, X_test, y_test)
     print("Finished Evaluating")
     # Show Results
     print("+++++++++++++++++++++++++++++++++++++++")
     print("Results:")
-    print("mse:", mse)
+    print("mae:", mae)
     print("Best parameters:", model.best_params_)
     print("Best score:", model.best_score_)
     print("Best estimator:", model.best_estimator_)
@@ -80,7 +80,7 @@ def train(data_path):
 
     with open(metrics_file) as f:
         metrics = json.load(f)
-    metrics[run_id] = {"mse": mse}
+    metrics[run_id] = {"mae": mae}
 
 
     # Save model
