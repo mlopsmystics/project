@@ -36,12 +36,12 @@ def monitor(data_path):
     mae = evaluate_mae(model, X_test, y_test)
     print("mae:: ", mae)
     if mae > 0.09:
-        print("Model accuracy is good enough")
-        print("mae:: ", mae)
-    else:
         print("Model accuracy is under threshold so train again")
         print("mae::", mae)
         subprocess.call(['python', 'train/train.py'])
+    else:
+        print("Model accuracy is good enough")
+        print("mae:: ", mae)
 
 
 
