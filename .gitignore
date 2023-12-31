@@ -7,4 +7,3 @@ venv/
 /.dvc/cache
 /.dvc/config.local
 /gdrive.json
-/mlruns

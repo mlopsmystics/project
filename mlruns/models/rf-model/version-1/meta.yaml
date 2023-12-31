@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1704009094770
+current_stage: None
+description: null
+last_updated_timestamp: 1704009094770
+name: rf-model
+run_id: null
+run_link: null
+source: file:///home/shehzad/project/mlruns/0/561a59d9bf974b6cb5dfcca1889c71c3/artifacts/rf-model
+status: READY
+status_message: null
+storage_location: file:///home/shehzad/project/mlruns/0/561a59d9bf974b6cb5dfcca1889c71c3/artifacts/rf-model
+user_id: null
+version: 1
