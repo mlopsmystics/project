@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zahid%20imran/Desktop/MLops%20Practice/project/mlruns/0/4410362288ac4294af670ea8356531a3/artifacts
+end_time: 1704015933036
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4410362288ac4294af670ea8356531a3
+run_name: bald-gnat-494
+run_uuid: 4410362288ac4294af670ea8356531a3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704015922187
+status: 4
+tags: []
+user_id: runner
