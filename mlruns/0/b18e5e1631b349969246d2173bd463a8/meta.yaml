@@ -1,0 +1,15 @@
+artifact_uri: file:///home/shehzad/project/mlruns/0/b18e5e1631b349969246d2173bd463a8/artifacts
+end_time: 1704010238808
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b18e5e1631b349969246d2173bd463a8
+run_name: youthful-zebra-414
+run_uuid: b18e5e1631b349969246d2173bd463a8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704010212749
+status: 3
+tags: []
+user_id: shehzad
