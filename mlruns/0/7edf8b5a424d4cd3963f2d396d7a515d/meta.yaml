@@ -1,0 +1,15 @@
+artifact_uri: file:///home/shehzad/project/mlruns/0/7edf8b5a424d4cd3963f2d396d7a515d/artifacts
+end_time: 1704128823580
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7edf8b5a424d4cd3963f2d396d7a515d
+run_name: delicate-sow-518
+run_uuid: 7edf8b5a424d4cd3963f2d396d7a515d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704128811789
+status: 4
+tags: []
+user_id: runner
