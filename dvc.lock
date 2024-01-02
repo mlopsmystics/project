@@ -31,5 +31,5 @@ stages:
     deps:
     - path: ./data/random_data.py
       hash: md5
-      md5: 1ce3ce663eb46d3b65ed97ecacebf724
-      size: 2651
+      md5: 708c1a4c31981a9b26ac8ff86fb1ef1a
+      size: 2652

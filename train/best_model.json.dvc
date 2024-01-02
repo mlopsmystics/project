@@ -1,5 +1,5 @@
 outs:
-- md5: 8b7e8ce33cb4c19d8eb752c08b949000
-  size: 201
+- md5: bbeb00f52ee37aeda4f8511ad88c9e95
+  size: 200
   hash: md5
   path: best_model.json

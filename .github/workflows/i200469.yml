@@ -47,6 +47,7 @@ jobs:
         git add .
         git commit -m "DVC data updated and Monitoring performed"
         git push
+        dvc push
     - uses: actions/checkout@v3
     - name: Docker Login
       uses: docker/login-action@v3.0.0
