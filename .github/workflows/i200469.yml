@@ -6,7 +6,6 @@ on:
   push:
     branches:
       - i200469
-
 jobs:
   build:
     runs-on: ubuntu-latest
