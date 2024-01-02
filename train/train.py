@@ -93,7 +93,7 @@ def train(data_path):
 
 
     # Load and check the best result from the file
-    best_result_file = "./train/model_regsistery/best.json"
+    best_result_file = "./train/model_regsistery/best_model.json"
     if os.path.exists(best_result_file):
         with open(best_result_file) as f:
             best_result = json.load(f)
@@ -105,10 +105,10 @@ def train(data_path):
             best_result["mae"] = mae
             with open(best_result_file, "w") as f:
                 json.dump(best_result, f)
+            # Save the model to the ./webApp directory
+            joblib.dump(model.best_estimator_, './webApp/model.pkl')
         else:
             print("Current result is not better than the best result. No update to the best.json file.")
-        # Save the model to the ./webApp directory
-        joblib.dump(model.best_estimator_, './webApp/model.pkl')
     else:
         # Create the file and store the current result
         print("Creating best.json file with the current result.")
