@@ -32,8 +32,6 @@ def append_to_data_quality_file(data_quality, file_path, current_file_path):
     else:
         with open(file_path, "w") as f:
             json.dump([data_quality], f)
-    with open(current_file_path, "w") as f:
-        json.dump([data_quality], f)
 
 def main():
     # Load train.csv and test.csv using DVC
@@ -46,12 +44,15 @@ def main():
     # Check data quality for train.csv
     train_data_quality = check_data_quality(train_df, "train")
     print("Train Data Quality:", train_data_quality)
-    append_to_data_quality_file(train_data_quality, "data/data_quality.json",'data/current_data_quality.json')
+    append_to_data_quality_file(train_data_quality, "data/data_quality.json")
 
     # Check data quality for test.csv
     test_data_quality = check_data_quality(test_df, "test")
     print("Test Data Quality:", test_data_quality)
-    append_to_data_quality_file(test_data_quality,"data/data_quality.json", "data/current_data_quality.json")
+    append_to_data_quality_file(test_data_quality,"data/data_quality.json")
+
+    with open('data/current_data_quality.json', "w") as f:
+        json.dump([{train_data_quality}+{test_data_quality}], f)
 
 if __name__ == "__main__":
     main()
