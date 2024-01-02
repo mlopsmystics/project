@@ -92,7 +92,7 @@ def train(data_path):
         pickle.dump(model.best_estimator_, f)
 
 
-        # Load and check the best result from the file
+    # Load and check the best result from the file
     best_result_file = "./train/model_regsistery/best.json"
     if os.path.exists(best_result_file):
         with open(best_result_file) as f:
