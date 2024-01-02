@@ -35,19 +35,10 @@ jobs:
       env:
         GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
       run: |
-        dvc pull
-        python ./data/random_data.py
-        python ./data/prepare_data.py
-        dvc add ./data/dummy_sensor_data.csv
-        dvc add ./data/prepared/train.csv
-        dvc add ./data/prepared/test.csv
-        python ./train/monitor.py
-        dvc add ./train/model_regsistery
+        dvc repro
         git add .
         git commit -m "DVC data updated and Monitoring performed"
         git push
-        dvc push
-
     - uses: actions/checkout@v3
     - name: Docker Login
       uses: docker/login-action@v3.0.0
