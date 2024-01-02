@@ -21,7 +21,7 @@ def check_data_quality(data_df, dataset_name):
     }
     return data_quality
 
-def append_to_data_quality_file(data_quality, file_path, current_file_path):
+def append_to_data_quality_file(data_quality, file_path):
     # Append to data_quality.json
     if os.path.exists(file_path):
         with open(file_path, "r") as f:
