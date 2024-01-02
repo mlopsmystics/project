@@ -19,18 +19,4 @@ stages:
   add_test_data:
     cmd: |
       dvc add ./data/prepared/test.csv
-  monitor_performance:
-    cmd: |
-      python ./train/monitor.py
-    deps:
-      - ./train/monitor.py
-      - ./data/prepared/train.csv
-      - ./data/prepared/test.csv
-  train_results:
-    cmd: |
-      dvc add ./train/model_regsistery
-    deps:
-      - ./train/model_regsistery
-  push_data:
-    cmd: |
-      dvc push
+
