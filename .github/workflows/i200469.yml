@@ -43,6 +43,7 @@ jobs:
         dvc add ./data/prepared/test.csv
         python ./train/monitor.py
         dvc add ./train/model_regsistery
+        dvc add ./train/best_model.json
         git add .
         git commit -m "DVC data updated and Monitoring performed"
         git push

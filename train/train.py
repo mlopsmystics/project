@@ -92,30 +92,6 @@ def train(data_path):
         pickle.dump(model.best_estimator_, f)
 
 
-    # Load and check the best result from the file
-    best_result_file = "./train/model_regsistery/best_model.json"
-    if os.path.exists(best_result_file):
-        with open(best_result_file) as f:
-            best_result = json.load(f)
-        best_mae = best_result.get("mae", float('inf'))
-        
-        # Compare with the current result
-        if mae < best_mae:
-            print("New best result! Updating the best.json file.")
-            best_result["mae"] = mae
-            with open(best_result_file, "w") as f:
-                json.dump(best_result, f)
-            # Save the model to the ./webApp directory
-            joblib.dump(model.best_estimator_, './webApp/model.pkl')
-        else:
-            print("Current result is not better than the best result. No update to the best.json file.")
-    else:
-        # Create the file and store the current result
-        print("Creating best.json file with the current result.")
-        with open(best_result_file, "w") as f:
-            json.dump({"mae": mae}, f)
-        # Save the model to the ./webApp directory
-        joblib.dump(model.best_estimator_, './webApp/model.pkl')
 
 
     # Register model
@@ -138,6 +114,31 @@ def train(data_path):
     model_registry.append(model_info)
     with open(model_registry_file, "w") as f:
         json.dump(model_registry, f)
+
+    # Load and check the best result from the file
+    best_result_file = "./train/best_model.json"
+    if os.path.exists(best_result_file):
+        with open(best_result_file) as f:
+            best_result = json.load(f)
+        best_mae = best_result.get("mae", float('inf'))
+        
+        # Compare with the current result
+        if mae < best_mae:
+            print("New best result! Updating the best.json file.")
+            best_result["mae"] = mae
+            with open(best_result_file, "w") as f:
+                json.dump(model_info, f)
+            # Save the model to the ./webApp directory
+            joblib.dump(model.best_estimator_, './webApp/model.pkl')
+        else:
+            print("Current result is not better than the best result. No update to the best.json file.")
+    else:
+        # Create the file and store the current result
+        print("Creating best.json file with the current result.")
+        with open(best_result_file, "w") as f:
+            json.dump(model_info, f)
+        # Save the model to the ./webApp directory
+        joblib.dump(model.best_estimator_, './webApp/model.pkl')
 
     print("Finished")
 
