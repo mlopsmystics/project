@@ -91,7 +91,12 @@ def train(data_path):
     with open(os.path.join(model_dir, "model.pkl"), "wb") as f:
         pickle.dump(model.best_estimator_, f)
 
-
+    # Read current data quality from csv
+    data_quality_file = "./data/current_data_quality.json"
+    data_quality = []
+    if os.path.exists(data_quality_file):
+        with open(data_quality_file) as f:
+            data_quality = json.load(f)
 
 
     # Register model
@@ -99,7 +104,7 @@ def train(data_path):
         "model_uri": f"models/run_{run_id}/model.pkl",
         "run_id": run_id,
         "model_params": model.best_params_,
-        "dataset": "my dataset",
+        "dataset": data_quality,
         "metrics": metrics[run_id]
     }
 

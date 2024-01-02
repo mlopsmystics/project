@@ -40,6 +40,9 @@ jobs:
         dvc add ./data/dummy_sensor_data.csv
         dvc add ./data/prepared/train.csv
         dvc add ./data/prepared/test.csv
+        python ./data/data_quality.py
+        dvc add ./data/data_quality.json
+        dvc add ./data/current_data_quality.json
         python ./train/monitor.py
         dvc add ./train/model_regsistery
         dvc add ./train/best_model.json
