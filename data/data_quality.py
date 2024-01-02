@@ -52,7 +52,7 @@ def main():
     append_to_data_quality_file(test_data_quality,"data/data_quality.json")
 
     with open('data/current_data_quality.json', "w") as f:
-        json.dump([{train_data_quality},{test_data_quality}], f)
+        json.dump([train_data_quality], f)
 
 if __name__ == "__main__":
     main()
