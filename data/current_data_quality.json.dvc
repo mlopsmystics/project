@@ -1,5 +1,5 @@
 outs:
-- md5: 948720ad8029eab72dfc925b0749a6c1
-  size: 475
+- md5: 2d53f3d47d3241651aea48d027612857
+  size: 462
   hash: md5
   path: current_data_quality.json
