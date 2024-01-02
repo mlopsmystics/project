@@ -10,14 +10,10 @@ stages:
   preprocess_data:
     cmd: python ./data/prepare_data.py
     deps:
-    - path: ./data/dummy_sensor_data.csv
-      hash: md5
-      md5: 784ead9e285d2e2efcfaac237b5bc1b5
-      size: 272602
     - path: ./data/prepare_data.py
       hash: md5
-      md5: ebb48655ecfd3479db1445a5f3fee540
-      size: 2015
+      md5: 41f2f4b1d2931027f0dfe24f88c9d184
+      size: 2066
   add_dummy_sensor_data:
     cmd: "dvc add ./data/dummy_sensor_data.csv\n"
   add_train_data:
@@ -25,7 +21,7 @@ stages:
   add_test_data:
     cmd: "dvc add ./data/prepared/test.csv\n"
   push_data:
-    cmd: "dvc push\n"
+    cmd: dvc push
   pull_data:
     cmd: dvc pull
   train_model:
@@ -35,5 +31,5 @@ stages:
     deps:
     - path: ./data/random_data.py
       hash: md5
-      md5: 20a4ed25df651bbe893439a65bb868a8
-      size: 2588
+      md5: 1ce3ce663eb46d3b65ed97ecacebf724
+      size: 2651
