@@ -1,0 +1,15 @@
+artifact_uri: file:///home/shehzad/project/mlruns/0/352fe70018b1427f9926684afe6b4fa8/artifacts
+end_time: 1704010199675
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 352fe70018b1427f9926684afe6b4fa8
+run_name: smiling-elk-955
+run_uuid: 352fe70018b1427f9926684afe6b4fa8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704010173729
+status: 3
+tags: []
+user_id: shehzad

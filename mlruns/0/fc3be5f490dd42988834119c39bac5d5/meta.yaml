@@ -1,0 +1,15 @@
+artifact_uri: file:///home/shehzad/project/mlruns/0/fc3be5f490dd42988834119c39bac5d5/artifacts
+end_time: 1704010199675
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: fc3be5f490dd42988834119c39bac5d5
+run_name: industrious-fox-959
+run_uuid: fc3be5f490dd42988834119c39bac5d5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704010173729
+status: 3
+tags: []
+user_id: shehzad

@@ -1,5 +1,7 @@
 schema: '2.0'
 stages:
+  pull_data:
+    cmd: dvc pull
   add_data:
     cmd: python ./data/random_data.py
     deps:

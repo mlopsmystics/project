@@ -1,0 +1,15 @@
+artifact_uri: file:///home/shehzad/project/mlruns/0/ac566659dbb547afbced5728307ca293/artifacts
+end_time: 1704009089100
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ac566659dbb547afbced5728307ca293
+run_name: defiant-pug-328
+run_uuid: ac566659dbb547afbced5728307ca293
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704009063001
+status: 3
+tags: []
+user_id: shehzad
