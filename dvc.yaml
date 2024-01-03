@@ -18,6 +18,9 @@ stages:
   add_test_data:
     cmd: |
       dvc add ./data/prepared/test.csv
+  check_data:
+    cmd: |
+      python ./data/data_quality.py
   push_data:
     cmd: dvc push
 
