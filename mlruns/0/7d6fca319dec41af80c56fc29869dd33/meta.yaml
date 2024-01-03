@@ -1,0 +1,15 @@
+artifact_uri: file:///home/shehzad/project/mlruns/0/7d6fca319dec41af80c56fc29869dd33/artifacts
+end_time: 1704010238808
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7d6fca319dec41af80c56fc29869dd33
+run_name: flawless-skink-474
+run_uuid: 7d6fca319dec41af80c56fc29869dd33
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704010212749
+status: 3
+tags: []
+user_id: shehzad

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/shehzad/project/mlruns/0/561a59d9bf974b6cb5dfcca1889c71c3/artifacts
+end_time: 1704009094774
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 561a59d9bf974b6cb5dfcca1889c71c3
+run_name: worried-bee-641
+run_uuid: 561a59d9bf974b6cb5dfcca1889c71c3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704009063001
+status: 3
+tags: []
+user_id: shehzad
