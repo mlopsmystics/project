@@ -1,0 +1,5 @@
+outs:
+- md5: 4fa3dd77ccb737af2fb84e19170bc889
+  size: 1861
+  hash: md5
+  path: data_quality.json

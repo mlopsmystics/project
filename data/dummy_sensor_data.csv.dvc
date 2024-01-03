@@ -1,0 +1,5 @@
+outs:
+- md5: 784ead9e285d2e2efcfaac237b5bc1b5
+  size: 272602
+  hash: md5
+  path: dummy_sensor_data.csv

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Prediction App</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#predict-btn').click(function(){
+                var date = $('#date-input').val();
+                $.ajax({
+                    url: '/predict',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({date: date}),
+                    success: function(response){
+                        $('#prediction').text('Predicted reading: ' + response.prediction);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Prediction App</h1>
+    <input type="datetime-local" id="date-input">
+    <button id="predict-btn">Predict</button>
+    <p id="prediction"></p>
+</body>
+</html>

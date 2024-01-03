@@ -2,3 +2,4 @@
     remote = zahid
 ['remote "zahid"']
     url = gdrive://1oQzugom2dKDOulBprzcIOwaNiBJDksZj
+    gdrive_use_service_account = true

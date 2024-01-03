@@ -1,3 +1,23 @@
 stages:
-  zahid:
-    cmd: python random_data.py
+  pull_data:
+    cmd: dvc pull
+  generate_data:
+    cmd: python ./data/random_data.py
+    deps:
+      - ./data/random_data.py
+  add_dummy_sensor_data:
+    cmd: |
+      dvc add ./data/dummy_sensor_data.csv
+  preprocess_data:
+    cmd: python ./data/prepare_data.py
+    deps:
+      - ./data/prepare_data.py
+  add_train_data:
+    cmd: |
+      dvc add ./data/prepared/train.csv
+  add_test_data:
+    cmd: |
+      dvc add ./data/prepared/test.csv
+  push_data:
+    cmd: dvc push
+
