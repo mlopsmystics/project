@@ -1,6 +1,6 @@
 outs:
-- md5: e871a22c29b66afb35accde83de501e7.dir
-  size: 4799702
-  nfiles: 12
+- md5: d8be9cc471ddb63ed7e18620b7f496c1.dir
+  size: 5198717
+  nfiles: 13
   hash: md5
   path: model_regsistery
