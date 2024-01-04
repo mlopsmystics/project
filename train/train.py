@@ -214,5 +214,5 @@ def trainMlFlow(data_path):
 
 if __name__=="__main__":
     data_path = "./data/prepared/"
-    # train(data_path)
+    train(data_path)
     trainMlFlow(data_path)
