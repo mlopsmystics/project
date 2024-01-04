@@ -164,7 +164,55 @@ def train(data_path):
     #     mlflow.register_model(model_uri, "rf-model")
     
     # print("Best parameters:", model.best_params_)
+
+
+def trainMlFlow(data_path):
+
+    df = pd.read_csv(data_path+'train.csv')
+    df_test = pd.read_csv(data_path+'test.csv')
+    X = df[['hour_of_day','day_of_week','year']] 
+    y = df['Reading']
+
+
+    X_test = df_test[['hour_of_day','day_of_week','year']]
+    y_test = df_test['Reading']
+
+    def evaluate_mae(model, X_test, y_test):
+        predictions = model.predict(X_test)
+        mae = np.mean(abs(predictions - y_test))  # Calculate mean absolute error
+        print("Mean Absolute Error:", mae)
+        return mae
+    # Define hyperparameter grid
+    param_grid = {
+        'n_estimators': [50],
+        'max_depth': [5]
+    }
+
+
+    # Train model with hyperparameter tuning
+    rf = RandomForestRegressor()
+    model = GridSearchCV(rf, param_grid)
+    # set the tracking uri
+    mlflow.set_tracking_uri("mlruns") 
+    mlflow.set_experiment("/rf-model")
+
+    with mlflow.start_run(run_name='hyperparametersTune') as run:
+        print("MLflow:")
+        model.fit(X, y)
+        
+        # Log metrics
+        mse = evaluate_mae(model, X_test, y_test)
+        mlflow.log_metric("mse", mse)
+            
+        # Register the best model
+        mlflow.sklearn.log_model(model.best_estimator_, "rf-model")
+        mlflow.sklearn.log_model(model, "rf-model")
+        model_uri = mlflow.get_artifact_uri('rf-model')
+        mlflow.register_model(model_uri, "rf-model")
     
+    print("Best parameters:", model.best_params_)
+
 if __name__=="__main__":
     data_path = "./data/prepared/"
-    train(data_path)
+    # train(data_path)
+    trainMlFlow(data_path)
