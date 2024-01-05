@@ -10,15 +10,7 @@ import mlflow as mlflow
 
 app = Flask(__name__)
 
-def load_model(model_name):
-    client = MlflowClient()
-    model_versions = client.search_model_versions(f"name='{model_name}'")
-    latest_model_version = model_versions[0].version
-    model = mlflow.pyfunc.load_model(f"models:/{model_name}/{latest_model_version}")
-    return model
-
-# Load your trained model
-model = load_model('ReadingPredictor')
+model = joblib.load('./webApp/model.pkl')
 
 @app.route('/', methods=['GET'])
 def index():
@@ -53,4 +45,4 @@ def predict():
     return jsonify({'prediction': prediction[0]})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

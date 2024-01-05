@@ -3,3 +3,13 @@ venv/
 /data/dummy_sensor_data.csv
 /data/prepared/test.csv
 /data/prepared/train.csv
+/.dvc/tmp
+/.dvc/cache
+/.dvc/config.local
+/gdrive.json
+/data/prepared/test.csv
+/data/prepared/train.csv
+/.dvc/tmp
+/.dvc/config.local
+/mlruns
+

@@ -6,18 +6,14 @@ WORKDIR /app
 
 # Copy source code
 COPY webApp/ /app/webApp
-COPY mlruns/ /app/mlruns
 COPY requirements.txt /app
 
 # Install dependencies
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose port  
 EXPOSE 5000
 
-# Set environment variables
-ENV FLASK_APP webApp
-ENV FLASK_RUN_HOST 0.0.0.0
 
 # Run app  
 CMD ["python", "./webApp/app.py"]

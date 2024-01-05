@@ -1,5 +1,7 @@
+[![MLOps Workflow](https://github.com/mlopsmystics/project/actions/workflows/main.yml/badge.svg)](https://github.com/mlopsmystics/project/actions/workflows/main.yml)
 
-readme_for_env
+
+# readme_for_env
 
 # MLOPS
 
